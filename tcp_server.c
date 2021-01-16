@@ -30,6 +30,13 @@ int main(){
 			//socket you are accepting address on, optional fill in for data to hold address client is connecting from, sizeof
 	client_socket = accept(server_socket, NULL, NULL);
 	//client_socket = accept(server_socket, stringhere, sizeof(string);
+		
+
+		// socket youre sending data on, data you are sending, sizeof message, optional flag)
+	send(client_socket, server_message, sizeof(server_message), 0);
+
+	// close the socket
+	close(server_socket);
 
 	return 0;
 
