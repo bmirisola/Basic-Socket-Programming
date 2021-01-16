@@ -30,11 +30,17 @@ int main(){
 	if(connection_status == -1){
  		printf("There was an error making a connection to the remote socket \n\n")
 	}
-       
+        // recieve data from server
+	char server_response[256];
+	// socket, pointer to string to hold server response, location to put server response, flag)
+	recv(network_socket, &server_response, sizeof(server_response), 0);
+
+	// print out the server's response
+	printf("The server sent the data: %s\n", server_response);
+	
+	//close the socket
+	close(network_socket);
 
 
-
-
-
-	  return 0;
+	return 0;
 }
