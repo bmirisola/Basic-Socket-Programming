@@ -6,7 +6,7 @@
 
 #include <netinet/in.h>
 
-int main(){
+int main() {
 
   	//create a socket
   	int network_socket;
@@ -24,7 +24,7 @@ int main(){
  	 server_address.sin_addr.s_addr = INADDR_ANY;
 
   	//	 actaul socket, pointer to address
-  	connect(network_socket, (struct sockaddr *) &server_address, sizeof(server_address);
+  	int connection_status = connect(network_socket, (struct sockaddr *) &server_address, sizeof(server_address));
 
 	//check for error with the connection
 	if(connection_status == -1){
