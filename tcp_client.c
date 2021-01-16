@@ -15,7 +15,7 @@ int main(){
 
  	 //specify am address for the socket
   	struct sockaddr_in server_address;
-  	server_address.sin_family = AF_INET
+  	server_address.sin_family = AF_INET;
   	server_address.sin_port = htons(9002);
   	
 	//server_address = structure that hold some information about the address
@@ -24,11 +24,11 @@ int main(){
  	 server_address.sin_addr.s_addr = INADDR_ANY;
 
   	//	 actaul socket, pointer to address
-  	connect(network_socket, (struct sockaddr *) &server_address, sizeof(server_address)
+  	connect(network_socket, (struct sockaddr *) &server_address, sizeof(server_address);
 
 	//check for error with the connection
 	if(connection_status == -1){
- 		printf("There was an error making a connection to the remote socket \n\n")
+ 		printf("There was an error making a connection to the remote socket \n\n");
 	}
         // recieve data from server
 	char server_response[256];
